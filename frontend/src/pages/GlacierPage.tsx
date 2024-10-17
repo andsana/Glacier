@@ -111,9 +111,7 @@ const GlacierPage = () => {
               color: '#111',
             },
           }}
-        >
-          Назад
-        </Button>
+        ></Button>
       </Box>
 
       {/* График ледника */}
