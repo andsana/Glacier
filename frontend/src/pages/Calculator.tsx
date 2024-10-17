@@ -139,7 +139,7 @@ const Calculator = () => {
     const { name, value, type } = e.target;
 
     // Проверяем тип поля: если тип "number", обрабатываем только если поле не пустое
-    const newValue = type === 'number' && value !== '' ? Math.abs(Math.floor(Number(value))) : value;
+    const newValue = type === 'number' && value !== '' ? Math.abs(Number(value)) : value;
 
     // Обновляем состояние формы
     setFormData((prev) => ({
