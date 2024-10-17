@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Container,
   FormControl,
   FormControlLabel,
@@ -204,7 +203,7 @@ const Calculator = () => {
 
       const irrigationWaterConsumption =
         (grassArea * 500000 * 1.5 * 90 * irrigationClimateFactor) / 1000 +
-        (wheatArea * 0 * 1.5 * 90 * irrigationClimateFactor) / 1000;
+        (wheatArea * 35000 * 1.5 * 90 * irrigationClimateFactor) / 1000;
 
       console.log('irrigationWaterConsumption', irrigationWaterConsumption);
 
@@ -337,7 +336,7 @@ const Calculator = () => {
               />
 
               <TextField
-                label="Number of Sheep"
+                label="Number of Sheep, Goats"
                 name="sheep"
                 value={formData.sheep}
                 onChange={handleInputChange}
@@ -401,7 +400,7 @@ const Calculator = () => {
                 sx={commonTextFieldStyles}
                 slotProps={{
                   input: {
-                    endAdornment: <InputAdornment position="end">m²</InputAdornment>,
+                    endAdornment: <InputAdornment position="end">hectare</InputAdornment>,
                   },
                 }}
               />
@@ -418,7 +417,7 @@ const Calculator = () => {
                 sx={commonTextFieldStyles}
                 slotProps={{
                   input: {
-                    endAdornment: <InputAdornment position="end">m²</InputAdornment>,
+                    endAdornment: <InputAdornment position="end">hectare</InputAdornment>,
                   },
                 }}
               />
@@ -460,19 +459,19 @@ const Calculator = () => {
                 <Typography variant="h6" sx={{ fontSize: '28px' }}>
                   {requiredGlaciers}
                 </Typography>
-                <Button
-                  sx={{
-                    background: '#6bbd45',
-                    color: '#fff',
-                    fontWeight: '400',
-                    fontSize: '15px',
-                    textTransform: 'none',
-                    borderRadius: '12px',
-                    p: '6px 16px',
-                  }}
-                >
-                  Request
-                </Button>
+                {/*<Button*/}
+                {/*  sx={{*/}
+                {/*    background: '#6bbd45',*/}
+                {/*    color: '#fff',*/}
+                {/*    fontWeight: '400',*/}
+                {/*    fontSize: '15px',*/}
+                {/*    textTransform: 'none',*/}
+                {/*    borderRadius: '12px',*/}
+                {/*    p: '6px 16px',*/}
+                {/*  }}*/}
+                {/*>*/}
+                {/*  Request*/}
+                {/*</Button>*/}
               </Box>
             </Grid>
           </Grid>

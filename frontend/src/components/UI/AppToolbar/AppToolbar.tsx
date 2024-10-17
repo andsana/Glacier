@@ -88,6 +88,9 @@ const AppToolbar = () => {
       }}
       role="presentation"
     >
+      <IconButton onClick={() => setDrawerOpen(false)} sx={{ alignSelf: 'flex-end', margin: '16px' }}>
+        <CloseIcon />
+      </IconButton>
       <List sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
         {menuItems.map((item) => (
           <ButtonBase
@@ -134,7 +137,7 @@ const AppToolbar = () => {
             edge="start"
             aria-label="menu"
             onClick={toggleDrawer(!drawerOpen)}
-            sx={{ display: { xs: 'block', md: 'none' } }}
+            sx={{ display: { xs: 'block', md: 'none', color: '#000' } }}
           >
             {drawerOpen ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
