@@ -76,7 +76,7 @@ const AppToolbar = () => {
     });
   };
 
-  const menuItems = ['about', 'examples', 'calculator'];
+  const menuItems = ['about', 'calculator', 'about'];
 
   const drawerList = () => (
     <Box
@@ -150,11 +150,11 @@ const AppToolbar = () => {
             <NavLinkStyled to="/" onClick={() => handleNavigation('about')}>
               ABOUT
             </NavLinkStyled>
-            <NavLinkStyled to="/" onClick={() => handleNavigation('examples')}>
-              EXAMPLES
-            </NavLinkStyled>
             <NavLinkStyled to="/" onClick={() => handleNavigation('calculator')}>
               CALCULATOR
+            </NavLinkStyled>
+            <NavLinkStyled to="/" onClick={() => handleNavigation('examples')}>
+              EXAMPLES
             </NavLinkStyled>
           </Box>
 
